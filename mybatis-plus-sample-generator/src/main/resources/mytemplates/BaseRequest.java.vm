@@ -1,0 +1,13 @@
+package ${cfg.myRequestPackage};
+
+/**
+ * <p>
+ * BaseService
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public class BaseRequest {
+
+}

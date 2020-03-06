@@ -1,0 +1,21 @@
+package ${cfg.myRequestPackage};
+
+import ${cfg.superMyRequestClassPackage};
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+/**
+ * <p>
+ * ${table.comment}
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Data
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
+public class ${entity}Request extends BaseRequest {
+    private static final long serialVersionUID = 1L;
+}

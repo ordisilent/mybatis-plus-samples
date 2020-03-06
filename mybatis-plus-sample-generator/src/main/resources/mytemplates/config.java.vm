@@ -1,0 +1,14 @@
+package ${cfg.ConfigPackage};
+
+import org.springframework.context.annotation.Configuration;
+
+
+/**
+ * 应用主配置
+ * @author ${author}
+ * @since ${date}
+ */
+@Configuration
+public class AppConfig {
+
+}

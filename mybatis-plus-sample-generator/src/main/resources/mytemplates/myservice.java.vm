@@ -1,0 +1,17 @@
+package ${cfg.myServicePackage};
+
+import org.springframework.stereotype.Service;
+import ${cfg.superMyServiceClassPackage};
+
+/**
+ * <p>
+ * ${table.comment}
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${entity}Service extends ${cfg.superMyServiceClassName} {
+
+}

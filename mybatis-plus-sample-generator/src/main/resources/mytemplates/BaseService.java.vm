@@ -1,0 +1,13 @@
+package ${cfg.myServicePackage};
+
+/**
+ * <p>
+ * BaseService
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public class BaseService {
+
+}
