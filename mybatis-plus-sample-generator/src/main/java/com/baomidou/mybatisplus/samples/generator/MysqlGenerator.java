@@ -199,7 +199,7 @@ public class MysqlGenerator {
         strategy.setSuperControllerClass("com.iqiyi.jr.loan.controller.BaseController");
 //        strategy.setInclude(scanner("输入表名"));
 //        strategy.setInclude("activity_gift_info","activity_group","activity_info","activity_join_record","activity_partner","activity_send_plan","activity_send_record");
-        strategy.setInclude("installment_card");
+        strategy.setInclude("loan_step");
         /*strategy.setInclude("installment_order"
                 ,"installment_loan_apply");
                 ,"installment_card"
@@ -222,7 +222,7 @@ public class MysqlGenerator {
 
 //        strategy.setExclude("asset_account");
         // 是否生成前缀Card or installmentCard
-        strategy.setTablePrefix("installment");
+//        strategy.setTablePrefix("installment");
 //        strategy.setSuperEntityColumns("id"); //配置上说明不需要知道主键
         strategy.setControllerMappingHyphenStyle(true);
 //        strategy.setTablePrefix(pc.getModuleName() + "_");
