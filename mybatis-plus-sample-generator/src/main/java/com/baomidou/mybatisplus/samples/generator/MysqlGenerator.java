@@ -68,7 +68,7 @@ public class MysqlGenerator {
         gc.setAuthor("jiatao01@qiyi.com");
         gc.setOpen(false);
         gc.setServiceName("I%sRepository");
-        gc.setServiceImplName("%sRepositoryImpl");
+        gc.setServiceImplName("%sRepository");
        /* gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
@@ -84,11 +84,11 @@ public class MysqlGenerator {
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         //jdbc:mysql://bj.paytest.w.qiyi.db:8767/pay_lottery?useUnicode=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-        dsc.setUrl("jdbc:mysql://bj.paytest.w.qiyi.db:8767/jr_loan?useUnicode=true&useSSL=false&characterEncoding=utf8&tinyInt1isBit=false");
+        dsc.setUrl("jdbc:mysql://bj.paytest.w.qiyi.db:8767/jr_quick_pass?useUnicode=true&autoReconnect=true&&zeroDateTimeBehavior=convertToNull");
 //         dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("pay_test");
-        dsc.setPassword("1w2E5L_o6V3e_iqiyi");
+        dsc.setUsername("qiyipay");
+        dsc.setPassword("9s4_e7nb_biu_wry");
         /*dsc.setDbType(DbType.MYSQL);
         dsc.setTypeConvert(new MySqlTypeConvert() {
             // 自定义数据库表字段类型转换【可选】
@@ -104,7 +104,7 @@ public class MysqlGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
 //        pc.setModuleName(scanner("模块名"));
-        pc.setModuleName("installment");//asset or activity
+        pc.setModuleName("quick.pass");//asset or activity
         pc.setParent("com.iqiyi.jr");
         pc.setService("dao.repository");
         pc.setServiceImpl("dao.repository.impl");
@@ -199,7 +199,7 @@ public class MysqlGenerator {
         strategy.setSuperControllerClass("com.iqiyi.jr.loan.controller.BaseController");
 //        strategy.setInclude(scanner("输入表名"));
 //        strategy.setInclude("activity_gift_info","activity_group","activity_info","activity_join_record","activity_partner","activity_send_plan","activity_send_record");
-        strategy.setInclude("loan_step");
+//        strategy.setInclude("quick_pass_bind_card");
         /*strategy.setInclude("installment_order"
                 ,"installment_loan_apply");
                 ,"installment_card"
@@ -222,7 +222,7 @@ public class MysqlGenerator {
 
 //        strategy.setExclude("asset_account");
         // 是否生成前缀Card or installmentCard
-//        strategy.setTablePrefix("installment");
+        strategy.setTablePrefix("quick_pass");
 //        strategy.setSuperEntityColumns("id"); //配置上说明不需要知道主键
         strategy.setControllerMappingHyphenStyle(true);
 //        strategy.setTablePrefix(pc.getModuleName() + "_");
